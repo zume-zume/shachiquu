@@ -41,12 +41,6 @@ struct TabContentView: View {
             .tabItem {
                 Image(systemName: "plus.circle")
             }
-            .sheet(isPresented: $isTweetViewPresented, onDismiss: {
-                tweets.append(tweetText)
-                tweetText = ""
-            }) {
-                TweetComposerView(tweetText: $tweetText)
-            }
             .tag(Selection.plus)
             
             // 2つ目のView
@@ -69,6 +63,12 @@ struct TabContentView: View {
                 isTweetViewPresented.toggle()
                 selection = lastSelection
             }
+        }
+        .sheet(isPresented: $isTweetViewPresented, onDismiss: {
+            tweets.append(tweetText)
+            tweetText = ""
+        }) {
+            TweetComposerView(tweetText: $tweetText)
         }
     }
 }
