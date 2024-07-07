@@ -37,6 +37,8 @@ struct ContentView: View {
         } detail: {
             Text("Select an item")
         }
+        
+        TabContentView()
     }
 
     private func addItem() {
