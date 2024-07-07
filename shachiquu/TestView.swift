@@ -9,10 +9,26 @@ import SwiftUI
 import SwiftData
 
 struct TestView: View {
+    /*
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
-    
+    */
+    @State private var isShowingTweetSheet = false
+    @State private var tweetText: String = ""
+    @State private var tweets: [String] = []
+     
     var body: some View {
+        VStack {
+            List(tweets, id: \.self) { tweet in
+                Text(tweet)
+            }
+            .padding()
+
+            Spacer()
+        }
+        .navigationTitle("Drips")
+        
+        /*
         List {
             ForEach(items) { item in
                 NavigationLink {
@@ -33,8 +49,10 @@ struct TestView: View {
                 }
             }
         }
+        */
     }
     
+    /*
     private func addItem() {
         withAnimation {
             let newItem = Item(timestamp: Date())
@@ -49,6 +67,7 @@ struct TestView: View {
             }
         }
     }
+    */
 }
 
 #Preview {

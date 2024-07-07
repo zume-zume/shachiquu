@@ -8,10 +8,23 @@
 import SwiftUI
 
 struct TabContentView: View {
-    @State private var selection = 0
+    
+    enum Selection {
+        case one
+        case plus
+        case two
+    }
+    
+    @State private var selection = Selection.one
+    @State private var lastSelection = Selection.one
+    
+    @State private var isTweetViewPresented = false
+    @State private var tweetText: String = ""
+    @State private var tweets: [String] = []
     
     var body: some View {
         TabView(selection: $selection) {
+            // 一つ目のView
             NavigationView {
                 TestView()
             }
@@ -19,8 +32,24 @@ struct TabContentView: View {
                 Image(systemName: "1.circle")
                 Text("First")
             }
-            .tag(0)
+            .tag(Selection.one)
             
+            // プラスボタン
+            Button(action: {
+            }) {
+            }
+            .tabItem {
+                Image(systemName: "plus.circle")
+            }
+            .sheet(isPresented: $isTweetViewPresented, onDismiss: {
+                tweets.append(tweetText)
+                tweetText = ""
+            }) {
+                TweetComposerView(tweetText: $tweetText)
+            }
+            .tag(Selection.plus)
+            
+            // 2つ目のView
             NavigationView {
                 Text("Second View")
                     .navigationTitle("Second")
@@ -29,10 +58,17 @@ struct TabContentView: View {
                 Image(systemName: "2.circle")
                 Text("Second")
             }
-            .tag(1)
-            
-            // 追加のタブをここに追加する。
-            
+            .tag(Selection.two)
+        }
+        .onChange(of: selection) {
+            switch selection {
+            case .one, .two:
+                lastSelection = selection
+                
+            case .plus:
+                isTweetViewPresented.toggle()
+                selection = lastSelection
+            }
         }
     }
 }
