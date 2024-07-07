@@ -16,6 +16,7 @@
 		A948EE042BD5479E00B05E99 /* shachiquuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948EE032BD5479E00B05E99 /* shachiquuUITests.swift */; };
 		A948EE062BD5479E00B05E99 /* shachiquuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948EE052BD5479E00B05E99 /* shachiquuUITestsLaunchTests.swift */; };
 		A948EE132BD556D500B05E99 /* TabContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948EE122BD556D500B05E99 /* TabContentView.swift */; };
+		A9E858DD2C3A85D100154BB2 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E858DC2C3A85D100154BB2 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A948EE032BD5479E00B05E99 /* shachiquuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shachiquuUITests.swift; sourceTree = "<group>"; };
 		A948EE052BD5479E00B05E99 /* shachiquuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shachiquuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A948EE122BD556D500B05E99 /* TabContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContentView.swift; sourceTree = "<group>"; };
+		A9E858DC2C3A85D100154BB2 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A948EDE82BD5479C00B05E99 /* ContentView.swift */,
 				A948EDEA2BD5479C00B05E99 /* Item.swift */,
 				A948EE122BD556D500B05E99 /* TabContentView.swift */,
+				A9E858DC2C3A85D100154BB2 /* TestView.swift */,
 				A948EDEC2BD5479D00B05E99 /* Assets.xcassets */,
 				A948EDEE2BD5479D00B05E99 /* Preview Content */,
 			);
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A948EE132BD556D500B05E99 /* TabContentView.swift in Sources */,
+				A9E858DD2C3A85D100154BB2 /* TestView.swift in Sources */,
 				A948EDE92BD5479C00B05E99 /* ContentView.swift in Sources */,
 				A948EDEB2BD5479C00B05E99 /* Item.swift in Sources */,
 				A948EDE72BD5479C00B05E99 /* shachiquuApp.swift in Sources */,

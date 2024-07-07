@@ -13,8 +13,7 @@ struct TabContentView: View {
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {
-                Text("First View")
-                    .navigationTitle("First")
+                TestView()
             }
             .tabItem {
                 Image(systemName: "1.circle")
